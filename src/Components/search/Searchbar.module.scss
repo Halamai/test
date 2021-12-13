@@ -1,0 +1,25 @@
+input,
+textarea {
+  padding-left: 35px;
+  font-size: 24px;
+  line-height: 30px;
+}
+.searchbar {
+  width: 248px;
+  height: 70px;
+  background: #333348;
+  border-radius: 40px;
+  border: none;
+  font-family: Sora;
+  font-size: 24px;
+  line-height: 30px;
+  color: #eeeeee;
+  outline: none;
+}
+.searchbar::placeholder {
+  color: #eeeeee;
+  border: none;
+  font-size: 24px;
+  line-height: 30px;
+  align-items: center;
+}

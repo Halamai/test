@@ -1,0 +1,41 @@
+.button {
+  width: 248px;
+  height: 70px;
+  background: #52519d;
+  border-radius: 40px;
+  border: none;
+  font-family: Sora;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #eeeeee;
+  outline: none;
+}
+
+.button:hover {
+  background: #eeeeee;
+  color: #52519d;
+  border: none;
+  cursor: pointer;
+}
+.buttonsort {
+  width: 248px;
+  height: 70px;
+  background: #333348;
+  border-radius: 40px;
+  border: none;
+  font-family: Sora;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #eeeeee;
+  outline: none;
+}
+.buttonsort:hover {
+  background: #eeeeee;
+  color: #333348;
+  border: none;
+  cursor: pointer;
+}
