@@ -11,23 +11,23 @@ const Cart = ({ user, posts }) => {
   };
 
   return (
-    <div key={user.id} className={style.cart}>
-      <ul key={user.id} className={style.cartList}>
+    <div className={style.cart}>
+      <div key={user.id} className={style.cartList}>
         <>
-          <h4 key={user.id}>{user.name}</h4>
-          <p key={user.id}>{user.email}</p>
-          <p key={user.id}>{user.phone}</p>
-          <p key={user.id}>{user.website}</p>
+          <h4 key={user.name}>{user.name}</h4>
+          <p key={user.email}>{user.email}</p>
+          <p key={user.phone}>{user.phone}</p>
+          <p key={user.website}>{user.website}</p>
         </>
-      </ul>
+      </div>
       <Button text="Показати всі пости" toggle={toggle} style="button"></Button>
       {isOpen && (
         <Modal toggle={toggle}>
           <ul className={style.modalList}>
             {posts.map((post) => (
               <>
-                <li key={post.id}>{post.title}</li>
-                <li key={post.id}>{post.body}</li>
+                <p key={post.title}>{post.title}</p>
+                <p key={post.body}>{post.body}</p>
                 <hr />
               </>
             ))}

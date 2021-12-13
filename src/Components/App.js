@@ -6,45 +6,40 @@ import Main from "./main/Main";
 const App = () => {
   const [users, setUsers] = useState([]);
   const [filter, setFilter] = useState("");
-  const [sort, setSort] = useState([]);
+  const [sorted, setSorted] = useState(false);
 
   const onHandleFilter = (e) => {
     setFilter(e.target.value);
   };
 
   const getOnHandleFilter = () => {
-    if (filter) {
+    if (sorted && !filter) {
+      return users.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    if (filter && sorted) {
+      return users
+        .filter((user) =>
+          user.name.toLowerCase().includes(filter.toLowerCase())
+        )
+        .sort((a, b) => a.name.localeCompare(b.name));
+    }
+    if (filter && !sorted) {
       return users.filter((user) =>
         user.name.toLowerCase().includes(filter.toLowerCase())
       );
     }
     return users;
   };
-  const sortUsers = () => {
-    setUsers(users.sort((a, b) => a.name.localeCompare(b.name)));
-  };
 
-  // useEffect(() => {
-  //   getUsers()
-  //     .then((users) => {
-  //       setUsers(users);
-  //     })
-  //     .then((sort) => {
-  //       setSort(sort);
-  //     });
-  // }, []);
+  const sortUsers = () => {
+    setSorted(true);
+  };
 
   useEffect(() => {
     getUsers().then((users) => {
       setUsers(users);
     });
   }, []);
-
-  // useEffect(() => {
-  //   setUsers().then((users) => {
-  //     setSort(users);
-  //   });
-  // }, [users]);
 
   return (
     <>
