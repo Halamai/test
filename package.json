@@ -13,7 +13,8 @@
     "react-scripts": "4.0.3",
     "redux": "^4.1.2",
     "sass": "^1.44.0",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "whirligig": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

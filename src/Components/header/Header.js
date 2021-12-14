@@ -6,7 +6,7 @@ import Button from "../button/Button";
 const Header = ({ onHandleFilter, sortUsers }) => {
   return (
     <header className={s.header}>
-      <Button text="Сортувати" style="buttonsort" toggle={sortUsers} />
+      <Button text="Sort" style="buttonsort" toggle={sortUsers} />
       <Searchbar onHandleFilter={onHandleFilter} />
     </header>
   );

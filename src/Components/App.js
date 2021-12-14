@@ -28,17 +28,19 @@ const App = () => {
         user.name.toLowerCase().includes(filter.toLowerCase())
       );
     }
-    return users;
+    return users.sort((a, b) => a.id - b.id);
   };
 
   const sortUsers = () => {
-    setSorted(true);
+    sorted ? setSorted(false) : setSorted(true);
   };
 
   useEffect(() => {
-    getUsers().then((users) => {
-      setUsers(users);
-    });
+    getUsers()
+      .then((users) => {
+        setUsers(users);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   return (
