@@ -1,0 +1,11 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<svg id="right" width="23" height="70" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 38L20 20L2 2" stroke="#EEEEEE" stroke-width="3" stroke-linecap="round"/>
+</svg>
+<svg id="left" width="23" height="70" viewBox="0 0 23 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 2L3 20L21 38" stroke="#EEEEEE" stroke-width="3" stroke-linecap="round"/>
+</svg>
+
+</defs>
+</svg>
